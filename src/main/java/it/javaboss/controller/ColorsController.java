@@ -12,7 +12,7 @@ public class ColorsController {
 	
 	@GetMapping("/colors")
 	public String chooseColor() {
-		System.out.println("scegli il colore";
+		System.out.println("scegli il colore");
 		return "choose_colors";
 	}
 	
