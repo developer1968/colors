@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ColorsController {
 
+	
 	@GetMapping("/colors")
 	public String chooseColor() {
 		return "choose_colors";
