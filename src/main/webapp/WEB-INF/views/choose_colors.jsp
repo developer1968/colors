@@ -19,6 +19,8 @@
   <select name="color" id="color">
       <option value="rosso">rosso</option>
       <option value="verde">verde</option>
+      <option value="blu">blu</option>
+      <option value="bianco">bianco</option>
   </select>
   <br><br>
   <input type="submit" value="Submit">
