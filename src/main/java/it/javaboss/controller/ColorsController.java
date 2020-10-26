@@ -19,7 +19,7 @@ public class ColorsController {
 	public String chooseColor() {
 		System.out.println("scegli il colore");
 		
-		String colorDB = colorsService.getColor();
+		//String colorDB = colorsService.getColor();
 		return "choose_colors";
 	}
 	
