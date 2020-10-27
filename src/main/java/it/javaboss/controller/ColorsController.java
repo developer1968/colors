@@ -19,6 +19,9 @@ public class ColorsController {
 	public String chooseColor() {
 		System.out.println("scegli il colore");
 		
+		
+		String msgWelcome = System.getenv("msg.welcome");
+		System.out.println("ColorsController.chooseColor msgWelcome: "+msgWelcome);
 		//String colorDB = colorsService.getColor();
 		return "choose_colors";
 	}
