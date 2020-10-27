@@ -4,6 +4,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -35,7 +36,14 @@ public class ColorsService {
 		JSONObject bodyJson=new JSONObject();
 		bodyJson.put("color", color);
 		HttpEntity<String> request = new HttpEntity<String>(bodyJson.toString());
-		Object result = restTemplate.postForEntity( uri, request, String.class);
+		Object result = null;
+		
+		try {
+			restTemplate.postForEntity( uri, request, String.class);
+		} catch (RestClientException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(result);
 	   
