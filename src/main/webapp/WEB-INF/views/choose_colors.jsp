@@ -12,7 +12,8 @@
 <title>Java Boss</title>
 </head>
 <body>
-  <h1>Scegli un colore</h1>
+<h1> ${msgWelcome}</h1>
+  <h2>Scegli un colore</h2>
   <hr>
   <form action="postColor" method="post">
   <label for="cars">Choose a color:</label>
