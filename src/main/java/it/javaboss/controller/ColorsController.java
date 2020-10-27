@@ -23,6 +23,10 @@ public class ColorsController {
 		String msgWelcome = System.getenv("msg.welcome");
 		System.out.println("ColorsController.chooseColor msgWelcome: "+msgWelcome);
 		model.addAttribute("msgWelcome", msgWelcome);
+		
+		String backgroundColor = System.getenv("backgroundColor");
+		System.out.println("ColorsController.chooseColor backgroundColor: "+backgroundColor);
+		
 		//String colorDB = colorsService.getColor();
 		return "choose_colors";
 	}
