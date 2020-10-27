@@ -16,12 +16,13 @@ public class ColorsController {
 	 private ColorsService colorsService;
 	
 	@GetMapping("/colors")
-	public String chooseColor() {
+	public String chooseColor(Model model) {
 		System.out.println("scegli il colore");
 		
 		
 		String msgWelcome = System.getenv("msg.welcome");
 		System.out.println("ColorsController.chooseColor msgWelcome: "+msgWelcome);
+		model.addAttribute("msgWelcome", msgWelcome);
 		//String colorDB = colorsService.getColor();
 		return "choose_colors";
 	}
